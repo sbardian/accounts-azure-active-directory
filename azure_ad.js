@@ -2,6 +2,11 @@ Accounts.oauth.registerService('azureAd');
 
 if (Meteor.isClient) {
     Meteor.loginWithAzureAd = function(options, callback) {
+
+
+        console.log('calling: Meteor.loginWithAzureAd')
+        console.log('loginWithAzureAd options: ', options)
+        console.log('loginWithAzureAd callback: ', callback)
         // support a callback without options
         if (! callback && typeof options === "function") {
             callback = options;
